@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Pretty URLs for articles: /article/slug
+RewriteRule ^article/([a-zA-Z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
+
+# Pretty URLs for categories and tags (optional)
+RewriteRule ^categorie/([a-zA-Z0-9-]+)/?$ categorie.php?slug=$1 [L,QSA]
+RewriteRule ^tag/([a-zA-Z0-9-]+)/?$ tag.php?slug=$1 [L,QSA]
